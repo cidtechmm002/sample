@@ -21,7 +21,15 @@ export function Reveal({ delay = 0, y = 28, children, ...rest }: Props) {
   );
 }
 
-export function WordReveal({ text, className = "", delay = 0 }: { text: string; className?: string; delay?: number }) {
+export function WordReveal({
+  text,
+  className = "",
+  delay = 0,
+}: {
+  text: string;
+  className?: string;
+  delay?: number;
+}) {
   const words = text.split(" ");
   return (
     <span className={className}>
@@ -34,7 +42,8 @@ export function WordReveal({ text, className = "", delay = 0 }: { text: string; 
             transition={{ duration: 0.9, delay: delay + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
             className="inline-block"
           >
-            {w}{i < words.length - 1 ? "\u00A0" : ""}
+            {w}
+            {i < words.length - 1 ? "\u00A0" : ""}
           </motion.span>
         </span>
       ))}

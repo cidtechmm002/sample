@@ -8,9 +8,16 @@ export const Route = createFileRoute("/treatments")({
   head: () => ({
     meta: [
       { title: "Treatments — SMILE Plastic Surgery" },
-      { name: "description", content: "Rhinoplasty, double eyelid, face contouring, breast surgery, liposuction and skin rejuvenation in Yangon." },
+      {
+        name: "description",
+        content:
+          "Rhinoplasty, double eyelid, face contouring, breast surgery, liposuction and skin rejuvenation in Yangon.",
+      },
       { property: "og:title", content: "Treatments — SMILE Plastic Surgery" },
-      { property: "og:description", content: "Surgical and non-surgical aesthetic treatments at SMILE Plastic Surgery." },
+      {
+        property: "og:description",
+        content: "Surgical and non-surgical aesthetic treatments at SMILE Plastic Surgery.",
+      },
     ],
   }),
   component: TreatmentsPage,
@@ -32,7 +39,10 @@ function TreatmentsPage() {
           <Reveal>
             <p className="text-eyebrow text-[color:var(--gold-light)]">Our Treatments</p>
             <h1 className="mt-6 font-display text-5xl leading-[0.95] md:text-8xl">
-              The full <em className="font-serif-display text-[color:var(--gold-light)]">menu of refinement.</em>
+              The full{" "}
+              <em className="font-serif-display text-[color:var(--gold-light)]">
+                menu of refinement.
+              </em>
             </h1>
           </Reveal>
         </div>
@@ -63,14 +73,25 @@ function TreatmentsPage() {
               <article id={t.slug} className="grid gap-10 md:grid-cols-12">
                 <div className={`md:col-span-7 ${i % 2 === 1 ? "md:order-2" : ""}`}>
                   <div className="group relative overflow-hidden">
-                    <img src={t.image} alt={t.name} loading="lazy" className="aspect-[4/3] w-full object-cover transition-transform duration-[1500ms] group-hover:scale-105" />
+                    <img
+                      src={t.image}
+                      alt={t.name}
+                      loading="lazy"
+                      className="aspect-[4/3] w-full object-cover transition-transform duration-[1500ms] group-hover:scale-105"
+                    />
                   </div>
                 </div>
                 <div className="md:col-span-5 md:py-12">
-                  <p className="text-eyebrow text-[color:var(--gold-dark)]">{t.category} · {t.duration}</p>
+                  <p className="text-eyebrow text-[color:var(--gold-dark)]">
+                    {t.category} · {t.duration}
+                  </p>
                   <h2 className="mt-4 font-display text-5xl leading-[1.05]">{t.name}</h2>
-                  <p className="mt-2 font-serif-display text-xl italic text-[color:var(--muted-foreground)]">{t.myanmar}</p>
-                  <p className="mt-6 text-base leading-relaxed text-[color:var(--muted-foreground)]">{t.blurb}</p>
+                  <p className="mt-2 font-serif-display text-xl italic text-[color:var(--muted-foreground)]">
+                    {t.myanmar}
+                  </p>
+                  <p className="mt-6 text-base leading-relaxed text-[color:var(--muted-foreground)]">
+                    {t.blurb}
+                  </p>
 
                   <div className="mt-8 grid grid-cols-3 gap-4 border-y border-[color:var(--border)] py-6">
                     <Meta label="Duration" value={t.duration} />
@@ -114,7 +135,9 @@ function TreatmentsPage() {
 function Meta({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <p className="text-[10px] tracking-[0.24em] uppercase text-[color:var(--muted-foreground)]">{label}</p>
+      <p className="text-[10px] tracking-[0.24em] uppercase text-[color:var(--muted-foreground)]">
+        {label}
+      </p>
       <p className="mt-2 font-display text-lg text-[color:var(--charcoal)]">{value}</p>
     </div>
   );
@@ -129,9 +152,14 @@ function Accordion({ title, children }: { title: string; children: React.ReactNo
         className="flex w-full items-center justify-between py-5 text-left text-xs tracking-[0.24em] uppercase"
       >
         {title}
-        <ChevronDown size={16} className={`transition-transform ${open ? "rotate-180 text-[color:var(--gold-dark)]" : ""}`} />
+        <ChevronDown
+          size={16}
+          className={`transition-transform ${open ? "rotate-180 text-[color:var(--gold-dark)]" : ""}`}
+        />
       </button>
-      <div className={`grid transition-all duration-500 ease-out ${open ? "grid-rows-[1fr] opacity-100 pb-6" : "grid-rows-[0fr] opacity-0"}`}>
+      <div
+        className={`grid transition-all duration-500 ease-out ${open ? "grid-rows-[1fr] opacity-100 pb-6" : "grid-rows-[0fr] opacity-0"}`}
+      >
         <div className="overflow-hidden text-sm leading-relaxed text-[color:var(--muted-foreground)]">
           {children}
         </div>

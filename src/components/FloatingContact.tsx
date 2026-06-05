@@ -2,9 +2,24 @@ import { useState } from "react";
 import { MessageCircle, Phone, Send, X, Plus } from "lucide-react";
 
 const ITEMS = [
-  { label: "WhatsApp", icon: MessageCircle, href: "https://wa.me/959123456789", color: "bg-[color:var(--teal-dark)]" },
-  { label: "Messenger", icon: MessageCircle, href: "https://m.me/smileplasticsurgery", color: "bg-[color:var(--teal)]" },
-  { label: "Telegram", icon: Send, href: "https://t.me/smileplasticsurgery", color: "bg-[color:var(--teal-light)]" },
+  {
+    label: "WhatsApp",
+    icon: MessageCircle,
+    href: "https://wa.me/959123456789",
+    color: "bg-[color:var(--green-dark)]",
+  },
+  {
+    label: "Messenger",
+    icon: MessageCircle,
+    href: "https://m.me/smileplasticsurgery",
+    color: "bg-[color:var(--green)]",
+  },
+  {
+    label: "Telegram",
+    icon: Send,
+    href: "https://t.me/smileplasticsurgery",
+    color: "bg-[color:var(--green-light)]",
+  },
   { label: "Phone", icon: Phone, href: "tel:+959123456789", color: "bg-[color:var(--gold-dark)]" },
 ];
 
@@ -26,7 +41,9 @@ export function FloatingContact() {
               <span className="hidden rounded-full bg-[color:var(--charcoal)] px-3 py-1 text-[10px] tracking-[0.2em] uppercase text-[color:var(--pearl)] md:inline">
                 {it.label}
               </span>
-              <span className={`${it.color} flex h-12 w-12 items-center justify-center rounded-full text-[color:var(--pearl)] shadow-lg transition-transform hover:scale-110`}>
+              <span
+                className={`${it.color} flex h-12 w-12 items-center justify-center rounded-full text-[color:var(--pearl)] shadow-lg transition-transform hover:scale-110`}
+              >
                 <it.icon size={18} />
               </span>
             </a>

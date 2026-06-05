@@ -2,6 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { CLINIC } from "@/lib/data";
+import { motion } from "framer-motion";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -23,37 +24,48 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => { setOpen(false); }, [location.pathname]);
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[color:var(--pearl)]/85 backdrop-blur-xl border-b border-[color:var(--border)]"
-          : "bg-transparent"
+          ? "bg-[color:var(--ivory)]/90 backdrop-blur-xl border-b border-[color:var(--border)]"
+          : "bg-[color:var(--ivory)]/50 backdrop-blur-md"
       }`}
     >
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-10">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-3.5 md:px-10 md:py-4">
         <Link to="/" className="group flex items-baseline gap-2">
-          <span className="font-display text-2xl">{CLINIC.name}</span>
-          <span className="hidden text-eyebrow text-[color:var(--gold-dark)] md:inline">Clinic</span>
+          <span className="font-display text-2xl text-[color:var(--dark-forest)]">
+            {CLINIC.name}
+          </span>
+          <span className="hidden text-eyebrow text-[color:var(--gold)] md:inline">Clinic</span>
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
           {NAV.map((item) => {
             const active =
-              item.to === "/"
-                ? location.pathname === "/"
-                : location.pathname.startsWith(item.to);
+              item.to === "/" ? location.pathname === "/" : location.pathname.startsWith(item.to);
             return (
               <Link
                 key={item.to}
                 to={item.to}
-                className={`underline-grow text-sm tracking-[0.18em] uppercase font-sans transition-colors ${
-                  active ? "text-[color:var(--gold-dark)]" : "text-[color:var(--foreground)]/80 hover:text-[color:var(--foreground)]"
+                className={`relative pb-1.5 text-sm tracking-[0.18em] uppercase font-sans transition-colors ${
+                  active
+                    ? "text-[color:var(--gold)]"
+                    : "text-[color:var(--emerald)]/80 hover:text-[color:var(--emerald)]"
                 }`}
               >
                 {item.label}
+                {active && (
+                  <motion.div
+                    layoutId="activeNavLine"
+                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-[color:var(--gold)]"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
               </Link>
             );
           })}
@@ -62,7 +74,7 @@ export function Header() {
         <div className="hidden md:block">
           <Link
             to="/contact"
-            className="shine-on-hover group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-[color:var(--charcoal)] bg-[color:var(--charcoal)] px-6 py-3 text-xs tracking-[0.24em] uppercase text-[color:var(--pearl)] transition-all hover:bg-transparent hover:text-[color:var(--charcoal)]"
+            className="shine-on-hover group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-[color:var(--emerald)] bg-[color:var(--emerald)] px-6 py-3 text-xs tracking-[0.24em] uppercase text-white transition-all hover:bg-[color:var(--gold)] hover:border-[color:var(--gold)] hover:text-[color:var(--dark-forest)]"
           >
             Book Consultation
           </Link>
@@ -78,16 +90,26 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-[color:var(--border)] bg-[color:var(--pearl)]">
+        <div className="md:hidden border-t border-[color:var(--border)] bg-[color:var(--ivory)]">
           <nav className="flex flex-col px-6 py-6">
-            {NAV.map((item) => (
-              <Link key={item.to} to={item.to} className="border-b border-[color:var(--border)] py-4 text-sm tracking-[0.18em] uppercase">
-                {item.label}
-              </Link>
-            ))}
+            {NAV.map((item) => {
+              const active =
+                item.to === "/" ? location.pathname === "/" : location.pathname.startsWith(item.to);
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className={`border-b border-[color:var(--border)] py-4 text-sm tracking-[0.18em] uppercase ${
+                    active ? "text-[color:var(--gold)]" : "text-[color:var(--emerald)]"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
             <Link
               to="/contact"
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-[color:var(--charcoal)] px-6 py-3 text-xs tracking-[0.24em] uppercase text-[color:var(--pearl)]"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-[color:var(--emerald)] px-6 py-3 text-xs tracking-[0.24em] uppercase text-white hover:bg-[color:var(--gold)]"
             >
               Book Consultation
             </Link>

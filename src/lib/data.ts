@@ -71,10 +71,19 @@ export const TREATMENTS: Treatment[] = [
     recovery: "5 – 7 days",
     price: "From $1,200",
     blurb: "Soft, defined eyes through incisional or non-incisional methods.",
-    benefits: ["Natural defined crease", "Brighter, more open look", "Minimal scarring", "Tailored fold height"],
-    procedure: "Performed under local anesthesia with sedation. Discreet sutures are removed within a week.",
+    benefits: [
+      "Natural defined crease",
+      "Brighter, more open look",
+      "Minimal scarring",
+      "Tailored fold height",
+    ],
+    procedure:
+      "Performed under local anesthesia with sedation. Discreet sutures are removed within a week.",
     faq: [
-      { q: "Incision or non-incision?", a: "Our surgeon recommends the right method based on tissue analysis." },
+      {
+        q: "Incision or non-incision?",
+        a: "Our surgeon recommends the right method based on tissue analysis.",
+      },
       { q: "Is bruising visible?", a: "Mild bruising fades within 5–7 days." },
     ],
   },
@@ -88,8 +97,14 @@ export const TREATMENTS: Treatment[] = [
     recovery: "10 – 21 days",
     price: "From $3,400",
     blurb: "Sculpted jawline and cheek architecture for refined elegance.",
-    benefits: ["Slimmer V-line", "Defined cheekbones", "Symmetric proportions", "Lasting transformation"],
-    procedure: "Combines bone contouring, buccal fat removal and fillers in a single session under general anesthesia.",
+    benefits: [
+      "Slimmer V-line",
+      "Defined cheekbones",
+      "Symmetric proportions",
+      "Lasting transformation",
+    ],
+    procedure:
+      "Combines bone contouring, buccal fat removal and fillers in a single session under general anesthesia.",
     faq: [
       { q: "Will it look natural?", a: "We design to preserve your individual character." },
       { q: "Can I eat normally after?", a: "Soft diet for 7 days, normal diet from day 14." },
@@ -105,7 +120,12 @@ export const TREATMENTS: Treatment[] = [
     recovery: "14 – 21 days",
     price: "From $4,200",
     blurb: "Augmentation, lift and reshaping with motiva implants.",
-    benefits: ["Premium ergonomic implants", "Sub-fascial placement", "Hidden incision", "Soft natural movement"],
+    benefits: [
+      "Premium ergonomic implants",
+      "Sub-fascial placement",
+      "Hidden incision",
+      "Soft natural movement",
+    ],
     procedure: "Performed under general anesthesia with an overnight stay in our recovery suite.",
     faq: [
       { q: "How long do implants last?", a: "Modern implants are designed for lifetime use." },
@@ -122,7 +142,12 @@ export const TREATMENTS: Treatment[] = [
     recovery: "7 – 14 days",
     price: "From $2,600",
     blurb: "VASER ultrasound-assisted body sculpting for precise definition.",
-    benefits: ["Smooth refined silhouette", "Skin tightening effect", "Minimal downtime", "Permanent fat removal"],
+    benefits: [
+      "Smooth refined silhouette",
+      "Skin tightening effect",
+      "Minimal downtime",
+      "Permanent fat removal",
+    ],
     procedure: "Tumescent VASER liposuction under twilight sedation, returning home the same day.",
     faq: [
       { q: "Is it permanent?", a: "Fat cells removed do not return with stable weight." },
@@ -140,7 +165,8 @@ export const TREATMENTS: Treatment[] = [
     price: "From $480",
     blurb: "Laser, exosome and bio-stimulator protocols for luminous skin.",
     benefits: ["Radiant tone", "Reduced pores & lines", "Even pigment", "No surgical downtime"],
-    procedure: "Customized in-clinic protocol combining laser, micro-needling and topical exosomes.",
+    procedure:
+      "Customized in-clinic protocol combining laser, micro-needling and topical exosomes.",
     faq: [
       { q: "How many sessions?", a: "A series of 3–6 sessions for transformative results." },
       { q: "Maintenance?", a: "Quarterly touch-ups maintain the glow." },
@@ -149,16 +175,53 @@ export const TREATMENTS: Treatment[] = [
 ];
 
 export const TIMELINE = [
-  { year: "2015", title: "Graduation", detail: "Doctor of Medicine, University of Medicine 1, Yangon" },
-  { year: "2017", title: "Fellowship", detail: "Plastic Surgery Fellowship, Seoul National University" },
-  { year: "2018", title: "International Training", detail: "Advanced Aesthetic Surgery, JK Plastic Surgery, Korea" },
-  { year: "2020", title: "Board Certification", detail: "Diplomate, International Society of Aesthetic Plastic Surgery" },
-  { year: "2023", title: "SMILE Plastic Surgery", detail: "Founded the clinic with a vision of refined, ethical aesthetics" },
+  {
+    year: "2015",
+    title: "Graduation",
+    detail: "Doctor of Medicine, University of Medicine 1, Yangon",
+  },
+  {
+    year: "2017",
+    title: "Fellowship",
+    detail: "Plastic Surgery Fellowship, Seoul National University",
+  },
+  {
+    year: "2018",
+    title: "International Training",
+    detail: "Advanced Aesthetic Surgery, JK Plastic Surgery, Korea",
+  },
+  {
+    year: "2020",
+    title: "Board Certification",
+    detail: "Diplomate, International Society of Aesthetic Plastic Surgery",
+  },
+  {
+    year: "2023",
+    title: "SMILE Plastic Surgery",
+    detail: "Founded the clinic with a vision of refined, ethical aesthetics",
+  },
 ];
 
 export const TESTIMONIALS = [
-  { name: "Hnin Ei", role: "Yangon", quote: "The team treated me with such care. My results feel like a more confident version of me." },
-  { name: "Phyu Phyu", role: "Mandalay", quote: "Truly the most professional clinic I have visited. Every detail was considered." },
-  { name: "May Thu", role: "Singapore", quote: "Travelled from abroad — worth every mile. Natural, elegant outcome." },
-  { name: "Su Lwin", role: "Bangkok", quote: "From consultation to recovery, the experience was unmatched." },
+  {
+    name: "Hnin Ei",
+    role: "Yangon",
+    quote:
+      "The team treated me with such care. My results feel like a more confident version of me.",
+  },
+  {
+    name: "Phyu Phyu",
+    role: "Mandalay",
+    quote: "Truly the most professional clinic I have visited. Every detail was considered.",
+  },
+  {
+    name: "May Thu",
+    role: "Singapore",
+    quote: "Travelled from abroad — worth every mile. Natural, elegant outcome.",
+  },
+  {
+    name: "Su Lwin",
+    role: "Bangkok",
+    quote: "From consultation to recovery, the experience was unmatched.",
+  },
 ];

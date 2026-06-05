@@ -44,89 +44,97 @@
   --color-charcoal: var(--charcoal);
   --color-silver: var(--silver);
   --color-cloud: var(--cloud);
-  --color-teal: var(--teal);
-  --color-teal-dark: var(--teal-dark);
-  --color-teal-light: var(--teal-light);
+  --color-green: var(--green);
+  --color-green-dark: var(--green-dark);
+  --color-green-light: var(--green-light);
+  --color-green-deep: var(--green-deep);
   --color-coral: var(--coral);
   --color-mint: var(--mint);
   --color-ivory: var(--ivory);
+  --color-emerald: var(--emerald);
+  --color-dark-forest: var(--dark-forest);
+  --color-light-sage: var(--light-sage);
 }
 
 :root {
   --radius: 0.25rem;
-  /* SMILE Plastic Surgery — soft tinted neutrals, never pure white */
-  --silver: oklch(0.9447 0.0052 247.88);      /* #EAEDF0 */
-  --cloud: oklch(0.9672 0 89.88);             /* #F4F4F4 */
-  --mint: oklch(0.9850 0.0051 145.54);        /* #F8FBF8 */
-  --ivory: oklch(0.9913 0.0029 84.56);        /* #FDFCFA */
-  --beige: oklch(0.9724 0.0096 72.66);        /* #FAF5EF */
-  --light-gray: oklch(0.9781 0.0103 261.79);  /* #F4F8FF */
-  --pearl: oklch(0.9958 0.0133 115.82);       /* #FDFFF5 */
-  --charcoal: oklch(0.2264 0 0);              /* #1C1C1C */
-  /* Brand accents from Smile Clinic logo */
-  --teal: oklch(0.62 0.09 180);               /* signature teal-green */
-  --teal-dark: oklch(0.48 0.085 185);
-  --teal-light: oklch(0.78 0.06 180);
-  --coral: oklch(0.62 0.18 25);               /* restrained red accent */
-  --gold: oklch(0.7518 0.0682 75.49);         /* #C8A97E */
-  --gold-light: oklch(0.88 0.07 85);
-  --gold-dark: oklch(0.60 0.09 75);
+  
+  /* Brand Palette from Logo */
+  --ivory: #F8F7F3;                           /* White / Ivory Background */
+  --emerald: #0F4C3A;                         /* Deep Emerald Green (Main Brand) */
+  --gold: #C8A46A;                            /* Champagne Gold (Luxury Accent) */
+  --gold-light: #E6D5B8;                      /* Soft Light Champagne Gold */
+  --gold-dark: #9A7E4F;                       /* Rich Dark Champagne Gold */
+  --dark-forest: #082E24;                     /* Hero overlay, footer, premium dark sections */
+  --light-sage: #EEF4F0;                      /* Very light sage for sections */
+  
+  --silver: #E1E2DC;
+  --cloud: #F1F2ED;
+  --mint: #EEF4F0;
+  --pearl: var(--ivory);
+  --beige: var(--light-sage);
+  --charcoal: var(--dark-forest);
+  --green: var(--emerald);
+  --green-dark: var(--dark-forest);
+  --green-light: var(--light-sage);
+  --green-deep: var(--dark-forest);
+  --coral: oklch(0.62 0.18 25);
 
   --background: var(--ivory);
-  --foreground: var(--charcoal);
+  --foreground: var(--dark-forest);
   --card: var(--ivory);
-  --card-foreground: var(--charcoal);
+  --card-foreground: var(--dark-forest);
   --popover: var(--ivory);
-  --popover-foreground: var(--charcoal);
-  --primary: var(--teal-dark);
-  --primary-foreground: oklch(0.98 0.005 110);
-  --secondary: var(--beige);
-  --secondary-foreground: var(--charcoal);
-  --muted: var(--light-gray);
-  --muted-foreground: oklch(0.45 0.02 200);
-  --accent: var(--teal);
-  --accent-foreground: oklch(0.98 0 0);
+  --popover-foreground: var(--dark-forest);
+  --primary: var(--emerald);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--light-sage);
+  --secondary-foreground: var(--dark-forest);
+  --muted: var(--light-sage);
+  --muted-foreground: #667770;
+  --accent: var(--gold);
+  --accent-foreground: var(--dark-forest);
   --destructive: var(--coral);
-  --destructive-foreground: oklch(0.98 0 0);
+  --destructive-foreground: #FFFFFF;
   --border: var(--silver);
   --input: var(--silver);
-  --ring: var(--teal);
-  --sidebar: var(--pearl);
-  --sidebar-foreground: var(--charcoal);
-  --sidebar-primary: var(--teal-dark);
-  --sidebar-primary-foreground: var(--pearl);
-  --sidebar-accent: var(--light-gray);
-  --sidebar-accent-foreground: var(--charcoal);
+  --ring: var(--emerald);
+  --sidebar: var(--ivory);
+  --sidebar-foreground: var(--dark-forest);
+  --sidebar-primary: var(--emerald);
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: var(--light-sage);
+  --sidebar-accent-foreground: var(--dark-forest);
   --sidebar-border: var(--silver);
-  --sidebar-ring: var(--teal);
+  --sidebar-ring: var(--emerald);
 
   --gradient-gold: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
-  --gradient-teal: linear-gradient(135deg, var(--teal-light), var(--teal-dark));
-  --gradient-brand: linear-gradient(120deg, var(--teal) 0%, var(--gold) 60%, var(--coral) 100%);
-  --gradient-soft: linear-gradient(180deg, var(--ivory), var(--light-gray));
-  --gradient-dark: linear-gradient(180deg, var(--charcoal), oklch(0.14 0.005 210));
-  --shadow-luxe: 0 30px 80px -30px oklch(0.30 0.05 200 / 0.20);
-  --shadow-gold: 0 10px 40px -10px oklch(0.76 0.10 80 / 0.5);
-  --shadow-teal: 0 10px 40px -12px oklch(0.62 0.09 180 / 0.35);
+  --gradient-green: linear-gradient(135deg, var(--green-light), var(--green-dark));
+  --gradient-brand: linear-gradient(120deg, var(--emerald) 0%, var(--gold) 60%, var(--dark-forest) 100%);
+  --gradient-soft: linear-gradient(180deg, var(--ivory), var(--light-sage));
+  --gradient-dark: linear-gradient(180deg, var(--dark-forest), #031510);
+  --shadow-luxe: 0 30px 80px -30px rgba(8, 46, 36, 0.2);
+  --shadow-gold: 0 10px 40px -10px rgba(200, 164, 106, 0.4);
+  --shadow-green: 0 10px 40px -12px rgba(15, 76, 58, 0.3);
 }
 
 .dark {
-  --background: var(--charcoal);
-  --foreground: var(--pearl);
-  --card: oklch(0.22 0 0);
-  --card-foreground: var(--pearl);
-  --popover: oklch(0.22 0 0);
-  --popover-foreground: var(--pearl);
+  --background: var(--dark-forest);
+  --foreground: var(--ivory);
+  --card: #0D3A2F;
+  --card-foreground: var(--ivory);
+  --popover: #0D3A2F;
+  --popover-foreground: var(--ivory);
   --primary: var(--gold);
-  --primary-foreground: var(--charcoal);
-  --secondary: oklch(0.25 0 0);
-  --secondary-foreground: var(--pearl);
-  --muted: oklch(0.25 0 0);
-  --muted-foreground: oklch(0.7 0.01 70);
+  --primary-foreground: var(--dark-forest);
+  --secondary: #0F4C3A;
+  --secondary-foreground: var(--ivory);
+  --muted: #0F4C3A;
+  --muted-foreground: #A0B2A9;
   --accent: var(--gold);
-  --accent-foreground: var(--charcoal);
-  --border: oklch(0.3 0 0);
-  --input: oklch(0.3 0 0);
+  --accent-foreground: var(--dark-forest);
+  --border: #134E40;
+  --input: #134E40;
   --ring: var(--gold);
 }
 
@@ -246,7 +254,7 @@
   .shimmer-text {
     background: linear-gradient(90deg,
       var(--charcoal) 0%,
-      var(--teal) 40%,
+      var(--green) 40%,
       var(--gold) 60%,
       var(--charcoal) 100%);
     background-size: 200% 100%;

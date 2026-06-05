@@ -14,9 +14,16 @@ export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
       { title: "Gallery — SMILE Plastic Surgery" },
-      { name: "description", content: "Before & after, video results and real patient stories from SMILE Plastic Surgery." },
+      {
+        name: "description",
+        content:
+          "Before & after, video results and real patient stories from SMILE Plastic Surgery.",
+      },
       { property: "og:title", content: "Gallery — Real Results" },
-      { property: "og:description", content: "Real, unretouched aesthetic results from our patients." },
+      {
+        property: "og:description",
+        content: "Real, unretouched aesthetic results from our patients.",
+      },
     ],
   }),
   component: GalleryPage,
@@ -36,7 +43,11 @@ const RESULTS = [
 const REELS = [gallery1, gallery2, gallery3, gallery4, testimonial1];
 
 const STORIES = [
-  { name: "Hnin Ei", quote: "I was nervous about the consultation, but the team listened so carefully.", img: testimonial1 },
+  {
+    name: "Hnin Ei",
+    quote: "I was nervous about the consultation, but the team listened so carefully.",
+    img: testimonial1,
+  },
   { name: "Phyu Phyu", quote: "Truly the most professional clinic I have visited.", img: gallery2 },
   { name: "May Thu", quote: "Travelled from Singapore — worth every mile.", img: gallery3 },
 ];
@@ -52,7 +63,8 @@ function GalleryPage() {
           <Reveal>
             <p className="text-eyebrow text-[color:var(--gold-light)]">Gallery</p>
             <h1 className="mt-6 font-display text-6xl leading-[0.95] md:text-8xl">
-              The proof, <em className="font-serif-display text-[color:var(--gold-light)]">unretouched.</em>
+              The proof,{" "}
+              <em className="font-serif-display text-[color:var(--gold-light)]">unretouched.</em>
             </h1>
           </Reveal>
         </div>
@@ -62,7 +74,11 @@ function GalleryPage() {
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-[1200px] px-6 md:px-10">
           <Reveal>
-            <BeforeAfter before={beforeAfter1} after={beforeAfter1} className="aspect-[16/10] luxe-shadow" />
+            <BeforeAfter
+              before={beforeAfter1}
+              after={beforeAfter1}
+              className="aspect-[16/10] luxe-shadow"
+            />
           </Reveal>
         </div>
       </section>
@@ -99,7 +115,9 @@ function GalleryPage() {
                   <BeforeAfter before={r.img} after={r.img} className="aspect-[4/3]" />
                   <div className="mt-4 flex items-center justify-between">
                     <p className="font-display text-lg">{r.label}</p>
-                    <p className="text-[10px] tracking-[0.24em] uppercase text-[color:var(--gold-dark)]">{r.cat}</p>
+                    <p className="text-[10px] tracking-[0.24em] uppercase text-[color:var(--gold-dark)]">
+                      {r.cat}
+                    </p>
                   </div>
                 </div>
               </Reveal>
@@ -118,15 +136,25 @@ function GalleryPage() {
 
           <div className="mt-12 flex gap-4 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory">
             {REELS.map((src, i) => (
-              <div key={i} className="group relative aspect-[9/16] w-[260px] shrink-0 snap-start overflow-hidden md:w-[300px]">
-                <img src={src} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" />
+              <div
+                key={i}
+                className="group relative aspect-[9/16] w-[260px] shrink-0 snap-start overflow-hidden md:w-[300px]"
+              >
+                <img
+                  src={src}
+                  alt=""
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-[1500ms] group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--charcoal)]/80 to-transparent" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="flex h-14 w-14 items-center justify-center rounded-full border border-[color:var(--gold)] bg-[color:var(--charcoal)]/60 text-[color:var(--gold)] backdrop-blur">
                     <Play size={18} />
                   </span>
                 </div>
-                <p className="absolute bottom-4 left-4 text-xs tracking-[0.2em] uppercase text-[color:var(--pearl)]">Reel · {i + 1}</p>
+                <p className="absolute bottom-4 left-4 text-xs tracking-[0.2em] uppercase text-[color:var(--pearl)]">
+                  Reel · {i + 1}
+                </p>
               </div>
             ))}
           </div>
@@ -146,11 +174,18 @@ function GalleryPage() {
               <Reveal key={s.name} delay={i * 0.1}>
                 <article className="group h-full overflow-hidden border border-[color:var(--border)] bg-[color:var(--card)] luxe-shadow">
                   <div className="aspect-[4/5] overflow-hidden">
-                    <img src={s.img} alt={s.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" />
+                    <img
+                      src={s.img}
+                      alt={s.name}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-[1500ms] group-hover:scale-110"
+                    />
                   </div>
                   <div className="p-8">
                     <p className="font-serif-display text-xl italic leading-relaxed">"{s.quote}"</p>
-                    <p className="mt-6 text-[10px] tracking-[0.3em] uppercase text-[color:var(--gold-dark)]">— {s.name}</p>
+                    <p className="mt-6 text-[10px] tracking-[0.3em] uppercase text-[color:var(--gold-dark)]">
+                      — {s.name}
+                    </p>
                   </div>
                 </article>
               </Reveal>

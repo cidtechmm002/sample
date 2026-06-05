@@ -12,9 +12,16 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact & Consultation — SMILE Plastic Surgery" },
-      { name: "description", content: "Book a private consultation at SMILE Plastic Surgery in Yangon. Reach us via phone, WhatsApp, or our booking form." },
+      {
+        name: "description",
+        content:
+          "Book a private consultation at SMILE Plastic Surgery in Yangon. Reach us via phone, WhatsApp, or our booking form.",
+      },
       { property: "og:title", content: "Contact & Consultation" },
-      { property: "og:description", content: "Reserve a private consultation at SMILE Plastic Surgery." },
+      {
+        property: "og:description",
+        content: "Reserve a private consultation at SMILE Plastic Surgery.",
+      },
     ],
   }),
   component: ContactPage,
@@ -31,7 +38,12 @@ type FormData = z.infer<typeof Schema>;
 
 function ContactPage() {
   const [done, setDone] = useState(false);
-  const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<FormData>({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<FormData>({
     resolver: zodResolver(Schema),
   });
 
@@ -51,10 +63,14 @@ function ContactPage() {
           <Reveal>
             <p className="text-eyebrow text-[color:var(--gold-dark)]">Private Consultation</p>
             <h1 className="mt-6 font-display text-5xl leading-[1.02] md:text-7xl">
-              Begin <em className="font-serif-display text-[color:var(--gold-dark)]">a quiet conversation.</em>
+              Begin{" "}
+              <em className="font-serif-display text-[color:var(--gold-dark)]">
+                a quiet conversation.
+              </em>
             </h1>
             <p className="mt-6 max-w-md text-base leading-relaxed text-[color:var(--muted-foreground)]">
-              Share a few details and our concierge will respond within one working day to arrange your visit.
+              Share a few details and our concierge will respond within one working day to arrange
+              your visit.
             </p>
           </Reveal>
 
@@ -81,9 +97,13 @@ function ContactPage() {
                     defaultValue=""
                     className="w-full border-b border-[color:var(--border)] bg-transparent py-3 text-base focus:border-[color:var(--gold)] focus:outline-none"
                   >
-                    <option value="" disabled>Choose one…</option>
+                    <option value="" disabled>
+                      Choose one…
+                    </option>
                     {TREATMENTS.map((t) => (
-                      <option key={t.slug} value={t.name}>{t.name}</option>
+                      <option key={t.slug} value={t.name}>
+                        {t.name}
+                      </option>
                     ))}
                     <option value="other">Something else</option>
                   </select>
@@ -110,7 +130,15 @@ function ContactPage() {
                 disabled={isSubmitting}
                 className="group mt-4 inline-flex items-center gap-4 rounded-full bg-[color:var(--charcoal)] px-10 py-5 text-xs tracking-[0.3em] uppercase text-[color:var(--pearl)] transition-all hover:bg-[color:var(--gold-dark)] disabled:opacity-50"
               >
-                {isSubmitting ? "Sending…" : done ? <><Check size={16} /> Request received</> : "Request Consultation →"}
+                {isSubmitting ? (
+                  "Sending…"
+                ) : done ? (
+                  <>
+                    <Check size={16} /> Request received
+                  </>
+                ) : (
+                  "Request Consultation →"
+                )}
               </button>
               {done && (
                 <p className="text-sm text-[color:var(--gold-dark)] animate-fade-up">
@@ -123,13 +151,20 @@ function ContactPage() {
 
         {/* Right: clinic info + map */}
         <aside className="relative bg-[color:var(--charcoal)] text-[color:var(--pearl)] md:col-span-5">
-          <img src={clinicExterior} alt="Clinic exterior" className="absolute inset-0 h-full w-full object-cover opacity-30" loading="lazy" />
+          <img
+            src={clinicExterior}
+            alt="Clinic exterior"
+            className="absolute inset-0 h-full w-full object-cover opacity-30"
+            loading="lazy"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-[color:var(--charcoal)]/60 to-[color:var(--charcoal)]" />
           <div className="relative flex h-full flex-col gap-12 px-8 py-20 md:px-12 md:py-32">
             <div>
               <p className="text-eyebrow text-[color:var(--gold-light)]">Visit Us</p>
               <h2 className="mt-6 font-display text-4xl leading-[1.1]">{CLINIC.name}</h2>
-              <p className="mt-2 font-serif-display text-lg italic text-[color:var(--pearl)]/70">Luxury medical aesthetics · Yangon</p>
+              <p className="mt-2 font-serif-display text-lg italic text-[color:var(--pearl)]/70">
+                Luxury medical aesthetics · Yangon
+              </p>
             </div>
 
             <ul className="space-y-6 text-sm">
@@ -154,10 +189,20 @@ function ContactPage() {
   );
 }
 
-function Field({ label, error, children }: { label: string; error?: string; children: React.ReactNode }) {
+function Field({
+  label,
+  error,
+  children,
+}: {
+  label: string;
+  error?: string;
+  children: React.ReactNode;
+}) {
   return (
     <label className="block">
-      <span className="text-[10px] tracking-[0.3em] uppercase text-[color:var(--muted-foreground)]">{label}</span>
+      <span className="text-[10px] tracking-[0.3em] uppercase text-[color:var(--muted-foreground)]">
+        {label}
+      </span>
       <div className="mt-1">{children}</div>
       {error && <span className="mt-2 block text-xs text-[color:var(--destructive)]">{error}</span>}
     </label>
@@ -171,7 +216,9 @@ function Info({ icon: Icon, label, value }: { icon: typeof MapPin; label: string
         <Icon size={14} />
       </span>
       <div>
-        <p className="text-[10px] tracking-[0.3em] uppercase text-[color:var(--gold-light)]/70">{label}</p>
+        <p className="text-[10px] tracking-[0.3em] uppercase text-[color:var(--gold-light)]/70">
+          {label}
+        </p>
         <p className="mt-1 text-[color:var(--pearl)]/90">{value}</p>
       </div>
     </li>

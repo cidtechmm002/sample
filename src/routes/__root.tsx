@@ -16,7 +16,6 @@ import { Footer } from "@/components/Footer";
 import { FloatingContact } from "@/components/FloatingContact";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
-
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-[color:var(--pearl)] px-4">
@@ -54,7 +53,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="rounded-full bg-[color:var(--charcoal)] px-6 py-3 text-xs tracking-[0.24em] uppercase text-[color:var(--pearl)]"
           >
             Try again
@@ -71,13 +73,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "SMILE Plastic Surgery — Luxury Medical Aesthetics" },
-      { name: "description", content: "Luxury plastic surgery and aesthetic medicine in Yangon. Rhinoplasty, double eyelid, contouring and skin rejuvenation by experienced surgeons." },
+      {
+        name: "description",
+        content:
+          "Luxury plastic surgery and aesthetic medicine in Yangon. Rhinoplasty, double eyelid, contouring and skin rejuvenation by experienced surgeons.",
+      },
       { property: "og:title", content: "SMILE Plastic Surgery — Luxury Medical Aesthetics" },
       { name: "twitter:title", content: "SMILE Plastic Surgery — Luxury Medical Aesthetics" },
-      { property: "og:description", content: "Luxury plastic surgery and aesthetic medicine in Yangon. Rhinoplasty, double eyelid, contouring and skin rejuvenation by experienced surgeons." },
-      { name: "twitter:description", content: "Luxury plastic surgery and aesthetic medicine in Yangon. Rhinoplasty, double eyelid, contouring and skin rejuvenation by experienced surgeons." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/471896d2-cc98-44ce-94d2-97dc7780755c/id-preview-b2ca3b88--a7c966a5-839c-416a-9b90-478c83fefb1a.lovable.app-1780158243154.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/471896d2-cc98-44ce-94d2-97dc7780755c/id-preview-b2ca3b88--a7c966a5-839c-416a-9b90-478c83fefb1a.lovable.app-1780158243154.png" },
+      {
+        property: "og:description",
+        content:
+          "Luxury plastic surgery and aesthetic medicine in Yangon. Rhinoplasty, double eyelid, contouring and skin rejuvenation by experienced surgeons.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Luxury plastic surgery and aesthetic medicine in Yangon. Rhinoplasty, double eyelid, contouring and skin rejuvenation by experienced surgeons.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/471896d2-cc98-44ce-94d2-97dc7780755c/id-preview-b2ca3b88--a7c966a5-839c-416a-9b90-478c83fefb1a.lovable.app-1780158243154.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/471896d2-cc98-44ce-94d2-97dc7780755c/id-preview-b2ca3b88--a7c966a5-839c-416a-9b90-478c83fefb1a.lovable.app-1780158243154.png",
+      },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:type", content: "website" },
     ],
@@ -92,8 +114,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <head><HeadContent /></head>
-      <body>{children}<Scripts /></body>
+      <head>
+        <HeadContent />
+      </head>
+      <body>
+        {children}
+        <Scripts />
+      </body>
     </html>
   );
 }
