@@ -12,7 +12,8 @@ export function Footer() {
               High-end medical aesthetics & surgical care.
             </h3>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-white/70">
-              Consult with our board-certified surgeons to receive a custom treatment recommendation.
+              Consult with our board-certified surgeons to receive a custom treatment
+              recommendation.
             </p>
             <Link
               to="/contact"

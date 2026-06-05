@@ -77,122 +77,133 @@ function Hero() {
 
       <motion.div
         style={{ opacity }}
-        className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-between px-6 pb-20 pt-36 md:px-10 md:pb-32"
+        className="relative z-10 mx-auto w-full h-full max-w-[1400px] px-6 pt-32 pb-20 md:pb-28 flex flex-col justify-between"
       >
-        <div className="flex items-center gap-3 text-[color:var(--gold)]">
-          <p className="text-eyebrow font-semibold tracking-[0.4em]">SMILE PLASTIC SURGERY YANGON</p>
-        </div>
+        <div />
 
-        <div className="max-w-5xl text-white">
-          {/* Fine Gold Top Accent Line */}
-          <div className="w-16 h-[2px] bg-[color:var(--gold)] mb-6 shadow-[0_0_8px_rgba(200,164,106,0.5)]" />
+        <div className="grid gap-12 lg:grid-cols-12 items-center w-full my-auto">
+          {/* Left Content (8 Columns) */}
+          <div className="lg:col-span-7 xl:col-span-8 text-white flex flex-col items-start">
+            <div className="flex flex-col items-start text-[color:var(--gold)]">
+              <span className="font-script text-[clamp(2.0rem,4vw,3.5rem)] text-[color:var(--gold)] tracking-wide leading-none select-none">
+                Signature Beauty Experience
+              </span>
+              <p className="text-eyebrow font-semibold tracking-[0.4em] mt-1 select-none">
+                SMILE PLASTIC SURGERY YANGON
+              </p>
+            </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 35 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-[clamp(2.5rem,7.5vw,7.2rem)] leading-[0.95] tracking-tight font-extralight text-white"
-          >
-            Where Artistry Meets
-            <br />
-            <span className="italic font-serif-display font-medium text-[color:var(--gold)]">
-              Aesthetic Excellence.
-            </span>
-          </motion.h1>
+            {/* Fine Gold Top Accent Line */}
+            <div className="w-16 h-[2px] bg-[color:var(--gold)] my-6 shadow-[0_0_8px_rgba(200,164,106,0.5)]" />
 
-          {/* Luxury Subtitle Chips */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="mt-6 flex flex-wrap gap-2.5"
-          >
-            <span className="rounded-full bg-white/5 border border-[color:var(--gold)]/40 px-3.5 py-1 text-[9px] tracking-[0.2em] uppercase text-[color:var(--gold)] font-medium backdrop-blur-md">
-              ✓ Korean Standard
-            </span>
-            <span className="rounded-full bg-white/5 border border-[color:var(--gold)]/40 px-3.5 py-1 text-[9px] tracking-[0.2em] uppercase text-[color:var(--gold)] font-medium backdrop-blur-md">
-              ✓ Seoul Trained
-            </span>
-            <span className="rounded-full bg-white/5 border border-[color:var(--gold)]/40 px-3.5 py-1 text-[9px] tracking-[0.2em] uppercase text-[color:var(--gold)] font-medium backdrop-blur-md">
-              ✓ Fellowship Certified
-            </span>
-          </motion.div>
+            <motion.h1
+              initial={{ opacity: 0, y: 35 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="font-display text-[clamp(2.5rem,7vw,6.5rem)] leading-[0.95] tracking-tight font-extralight text-white"
+            >
+              Where Artistry Meets
+              <br />
+              <span className="italic font-serif-display font-medium text-[color:var(--gold)]">
+                Aesthetic Excellence.
+              </span>
+            </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="mt-8 max-w-xl text-base leading-relaxed text-white/85 md:text-lg"
-          >
-            Certified by the Korean Association of Plastic Surgeons. We deliver natural-looking cosmetic and reconstructive results tailored to your unique facial structure.
-          </motion.p>
-        </div>
+            {/* Luxury Subtitle Chips */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="mt-6 flex flex-wrap gap-2.5"
+            >
+              <span className="rounded-full bg-white/5 border border-[color:var(--gold)]/40 px-3.5 py-1 text-[9px] tracking-[0.2em] uppercase text-[color:var(--gold)] font-medium backdrop-blur-md">
+                ✓ Korean Standard
+              </span>
+              <span className="rounded-full bg-white/5 border border-[color:var(--gold)]/40 px-3.5 py-1 text-[9px] tracking-[0.2em] uppercase text-[color:var(--gold)] font-medium backdrop-blur-md">
+                ✓ Seoul Trained
+              </span>
+              <span className="rounded-full bg-white/5 border border-[color:var(--gold)]/40 px-3.5 py-1 text-[9px] tracking-[0.2em] uppercase text-[color:var(--gold)] font-medium backdrop-blur-md">
+                ✓ Fellowship Certified
+              </span>
+            </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.1 }}
-          className="flex flex-col items-start gap-6 sm:flex-row sm:items-center"
-        >
-          <Link
-            to="/contact"
-            className="shine-on-hover group inline-flex items-center gap-4 rounded-full bg-[color:var(--gold)] px-8 py-4 text-xs tracking-[0.3em] uppercase text-[color:var(--dark-forest)] font-medium transition-all hover:bg-white hover:text-[color:var(--dark-forest)] hover:scale-105 duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(200,164,106,0.35)]"
-          >
-            Book Consultation
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-          </Link>
-          <Link
-            to="/treatments"
-            className="group inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-white hover:text-[color:var(--gold)] transition-colors hover:scale-105 duration-300"
-          >
-            <span className="underline-grow">Explore Treatments</span>
-          </Link>
-        </motion.div>
-      </motion.div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.8 }}
+              className="mt-8 max-w-xl text-base leading-relaxed text-white/85 md:text-lg"
+            >
+              Certified by the Korean Association of Plastic Surgeons. We deliver natural-looking
+              cosmetic and reconstructive results tailored to your unique facial structure.
+            </motion.p>
 
-      {/* Floating stats card (Option 3 - Unified Trust Section) */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1.3 }}
-        className="absolute right-10 top-1/2 z-10 hidden -translate-y-1/2 lg:block"
-      >
-        <div className="bg-[color:var(--emerald)]/90 backdrop-blur-md border border-[color:var(--gold)]/35 rounded-2xl p-8 text-white shadow-2xl max-w-xs">
-          <p className="text-eyebrow text-[color:var(--gold)] tracking-[0.25em] font-semibold">
-            TRUSTED CLINIC
-          </p>
-          <div className="mt-4 grid grid-cols-2 gap-x-8 gap-y-4 border-b border-white/10 pb-5">
-            {STATS.slice(0, 4).map((s) => (
-              <div key={s.label}>
-                <p className="font-display text-2xl text-[color:var(--gold)] font-medium">
-                  {s.value}
-                </p>
-                <p className="mt-1 text-[9px] tracking-[0.15em] uppercase text-white/70 leading-none">
-                  {s.label}
-                </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1.1 }}
+              className="mt-10 flex flex-col items-start gap-6 sm:flex-row sm:items-center"
+            >
+              <Link
+                to="/contact"
+                className="shine-on-hover group inline-flex items-center gap-4 rounded-full bg-[color:var(--gold)] px-8 py-4 text-xs tracking-[0.3em] uppercase text-[color:var(--dark-forest)] font-medium transition-all hover:bg-white hover:text-[color:var(--dark-forest)] hover:scale-105 duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(200,164,106,0.35)]"
+              >
+                Book Consultation
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link
+                to="/treatments"
+                className="group inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-white hover:text-[color:var(--gold)] transition-colors hover:scale-105 duration-300"
+              >
+                <span className="underline-grow">Explore Treatments</span>
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* Right Content - Stats Card (4 Columns) */}
+          <div className="lg:col-span-5 xl:col-span-4 hidden lg:flex justify-end">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 1.3 }}
+              className="bg-[color:var(--emerald)]/90 backdrop-blur-md border border-[color:var(--gold)]/35 rounded-2xl p-8 text-white shadow-2xl w-full max-w-xs"
+            >
+              <p className="text-eyebrow text-[color:var(--gold)] tracking-[0.25em] font-semibold">
+                TRUSTED CLINIC
+              </p>
+              <div className="mt-4 grid grid-cols-2 gap-x-8 gap-y-4 border-b border-white/10 pb-5">
+                {STATS.slice(0, 4).map((s) => (
+                  <div key={s.label}>
+                    <p className="font-display text-2xl text-[color:var(--gold)] font-medium">
+                      {s.value}
+                    </p>
+                    <p className="mt-1 text-[9px] tracking-[0.15em] uppercase text-white/70 leading-none">
+                      {s.label}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div className="mt-5 flex flex-col gap-2.5 text-xs text-white/90">
-            <div className="flex items-center gap-2.5">
-              <span className="text-[color:var(--gold)] font-semibold">✓</span>
-              <span className="tracking-wide text-white/90">Korean Standard</span>
-            </div>
-            <div className="flex items-center gap-2.5">
-              <span className="text-[color:var(--gold)] font-semibold">✓</span>
-              <span className="tracking-wide text-white/90">Seoul Trained</span>
-            </div>
-            <div className="flex items-center gap-2.5">
-              <span className="text-[color:var(--gold)] font-semibold">✓</span>
-              <span className="tracking-wide text-white/90">Fellowship Certified</span>
-            </div>
+              <div className="mt-5 flex flex-col gap-2.5 text-xs text-white/90">
+                <div className="flex items-center gap-2.5">
+                  <span className="text-[color:var(--gold)] font-semibold">✓</span>
+                  <span className="tracking-wide text-white/90">Korean Standard</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <span className="text-[color:var(--gold)] font-semibold">✓</span>
+                  <span className="tracking-wide text-white/90">Seoul Trained</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <span className="text-[color:var(--gold)] font-semibold">✓</span>
+                  <span className="tracking-wide text-white/90">Fellowship Certified</span>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
-      </motion.div>
 
-      <div className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-[10px] tracking-[0.3em] uppercase text-white/60">
-        Scroll
-      </div>
+        <div className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-[10px] tracking-[0.3em] uppercase text-white/60">
+          Scroll
+        </div>
+      </motion.div>
     </section>
   );
 }
@@ -223,9 +234,14 @@ function SignatureTreatments() {
         <div className="grid items-end gap-10 md:grid-cols-12">
           <div className="md:col-span-7">
             <Reveal>
-              <div className="flex items-center gap-3 text-[color:var(--gold)]">
-                <div className="w-8 h-px bg-[color:var(--gold)]" />
-                <p className="text-eyebrow font-semibold tracking-[0.4em]">PROCEDURES</p>
+              <div className="flex flex-col items-start text-[color:var(--gold)]">
+                <span className="font-script text-[clamp(1.75rem,3.5vw,3rem)] text-[color:var(--gold-dark)] leading-none select-none">
+                  Our Specialities
+                </span>
+                <div className="flex items-center gap-3 mt-1.5">
+                  <div className="w-8 h-px bg-[color:var(--gold)]" />
+                  <p className="text-eyebrow font-semibold tracking-[0.4em]">PROCEDURES</p>
+                </div>
               </div>
               <h2 className="mt-6 font-display text-5xl leading-[1.1] text-[color:var(--dark-forest)] md:text-7xl font-light">
                 Signature <br />
@@ -238,7 +254,8 @@ function SignatureTreatments() {
           <div className="md:col-span-5">
             <Reveal delay={0.15}>
               <p className="max-w-md text-base leading-relaxed text-[color:var(--muted-foreground)]">
-                All treatments are tailored to your anatomy by certified surgeons, performed in sterile operating suites equipped with modern medical devices.
+                All treatments are tailored to your anatomy by certified surgeons, performed in
+                sterile operating suites equipped with modern medical devices.
               </p>
             </Reveal>
           </div>
@@ -399,9 +416,14 @@ function DoctorHighlight() {
     <section className="bg-[color:var(--light-sage)] py-28 md:py-40">
       <div className="mx-auto grid max-w-[1400px] gap-16 px-6 md:grid-cols-12 md:px-10">
         <Reveal className="md:col-span-5">
-          <div className="flex items-center gap-3 text-[color:var(--gold)]">
-            <div className="w-8 h-px bg-[color:var(--gold)]" />
-            <p className="text-eyebrow font-semibold tracking-[0.4em]">SURGICAL EXPERTISE</p>
+          <div className="flex flex-col items-start text-[color:var(--gold)]">
+            <span className="font-script text-[clamp(1.75rem,3.5vw,3rem)] text-[color:var(--gold-dark)] leading-none select-none">
+              Meet the Founder
+            </span>
+            <div className="flex items-center gap-3 mt-1.5">
+              <div className="w-8 h-px bg-[color:var(--gold)]" />
+              <p className="text-eyebrow font-semibold tracking-[0.4em]">SURGICAL EXPERTISE</p>
+            </div>
           </div>
 
           <h2 className="mt-6 font-display text-5xl leading-[1.05] text-[color:var(--dark-forest)] md:text-6xl font-light">
@@ -425,28 +447,19 @@ function DoctorHighlight() {
 
           <div className="mt-8 flex flex-col gap-3.5 text-xs text-[color:var(--muted-foreground)] border-l border-[color:var(--gold)]/30 pl-5 py-1">
             <div className="flex items-center gap-3">
-              <Check
-                size={12}
-                className="text-[color:var(--gold)] shrink-0"
-              />
+              <Check size={12} className="text-[color:var(--gold)] shrink-0" />
               <span className="font-sans tracking-wider text-[color:var(--dark-forest)]/90 font-medium">
                 Board-Certified Plastic Surgery Specialist
               </span>
             </div>
             <div className="flex items-center gap-3">
-              <Check
-                size={12}
-                className="text-[color:var(--gold)] shrink-0"
-              />
+              <Check size={12} className="text-[color:var(--gold)] shrink-0" />
               <span className="font-sans tracking-wider text-[color:var(--dark-forest)]/90 font-medium">
                 Certified by Association of Korean Plastic Surgeons
               </span>
             </div>
             <div className="flex items-center gap-3">
-              <Check
-                size={12}
-                className="text-[color:var(--gold)] shrink-0"
-              />
+              <Check size={12} className="text-[color:var(--gold)] shrink-0" />
               <span className="font-sans tracking-wider text-[color:var(--dark-forest)]/90 font-medium">
                 100% Dedicated Consultation & Continuous Care
               </span>
@@ -488,37 +501,48 @@ function DoctorHighlight() {
           </Link>
         </Reveal>
 
-        <Reveal delay={0.2} className="md:col-span-7">
-          <div className="relative p-4 bg-white border border-[color:var(--gold)]/20 shadow-2xl overflow-hidden rounded-md group">
-            {/* Inner Gold Frame */}
-            <div className="absolute inset-8 border border-[color:var(--gold)]/25 pointer-events-none z-20 transition-all duration-700 group-hover:inset-6 group-hover:border-[color:var(--gold)]/50" />
+        <Reveal delay={0.2} className="md:col-span-7 flex items-center justify-center">
+          <div className="relative w-full max-w-[500px] aspect-[4/5] md:aspect-auto md:h-[500px] mt-10 md:mt-0">
+            {/* Background decorative gold frame offset */}
+            <div className="absolute -inset-4 border border-[color:var(--gold)]/20 rounded-md pointer-events-none z-0" />
 
-            {/* Fine Gold Decorative corners */}
-            <div className="absolute top-10 left-10 w-4 h-4 border-t border-l border-[color:var(--gold)] z-20 pointer-events-none" />
-            <div className="absolute top-10 right-10 w-4 h-4 border-t border-r border-[color:var(--gold)] z-20 pointer-events-none" />
-            <div className="absolute bottom-10 left-10 w-4 h-4 border-b border-l border-[color:var(--gold)] z-20 pointer-events-none" />
-            <div className="absolute bottom-10 right-10 w-4 h-4 border-b border-r border-[color:var(--gold)] z-20 pointer-events-none" />
-
-            <img
-              src={doctorPortrait}
-              alt="SMILE Plastic Surgery doctor"
-              loading="lazy"
-              className="w-full object-cover rounded-sm transition-transform duration-[2000ms] group-hover:scale-[1.03]"
-              width={1024}
-              height={1280}
-            />
-
-            {/* Trust overlay badges */}
-            <div className="absolute top-12 left-12 flex flex-col gap-2.5 z-20">
-              <span className="rounded-full bg-[color:var(--dark-forest)]/90 border border-[color:var(--gold)]/40 px-3.5 py-1 text-[9px] tracking-[0.2em] uppercase text-[color:var(--gold)] backdrop-blur-md shadow-md">
-                ✓ Seoul National Univ Fellow
-              </span>
-              <span className="rounded-full bg-[color:var(--dark-forest)]/90 border border-[color:var(--gold)]/40 px-3.5 py-1 text-[9px] tracking-[0.2em] uppercase text-[color:var(--gold)] backdrop-blur-md shadow-md">
-                ✓ Korean Board Certified
-              </span>
+            {/* Overlapping Background facility photo (bottom-left) */}
+            <div className="absolute bottom-[-20px] left-[-30px] w-[240px] aspect-[4/3] rounded-md border border-[color:var(--gold)]/30 overflow-hidden shadow-xl z-20 transform -rotate-6 transition-transform duration-500 hover:rotate-0 hover:scale-105 bg-white p-1.5">
+              <img
+                src={heroClinic}
+                alt="Clinic Facility"
+                loading="lazy"
+                className="w-full h-full object-cover rounded-sm"
+              />
             </div>
 
-            <div className="absolute bottom-12 right-12 bg-[color:var(--emerald)]/95 border border-[color:var(--gold)]/45 rounded-xl p-5 text-white backdrop-blur-md shadow-xl z-20 transition-all duration-500 group-hover:translate-y-[-2px] group-hover:shadow-[color:var(--gold)]/15">
+            {/* Primary Doctor Portrait (center-right) */}
+            <div className="absolute inset-0 rounded-md border border-[color:var(--gold)]/25 overflow-hidden shadow-2xl z-10 transform rotate-3 transition-all duration-500 hover:rotate-0 hover:scale-[1.02] bg-white p-3">
+              {/* Decorative corners inside the white frame */}
+              <div className="absolute top-5 left-5 w-3 h-3 border-t border-l border-[color:var(--gold)]/30 z-20 pointer-events-none" />
+              <div className="absolute top-5 right-5 w-3 h-3 border-t border-r border-[color:var(--gold)]/30 z-20 pointer-events-none" />
+              <div className="absolute bottom-5 left-5 w-3 h-3 border-b border-l border-[color:var(--gold)]/30 z-20 pointer-events-none" />
+              <div className="absolute bottom-5 right-5 w-3 h-3 border-b border-r border-[color:var(--gold)]/30 z-20 pointer-events-none" />
+
+              <img
+                src={doctorPortrait}
+                alt="Dr. Smile, Lead Surgeon"
+                loading="lazy"
+                className="w-full h-full object-cover rounded-sm"
+              />
+              {/* Trust overlay badges */}
+              <div className="absolute top-8 left-8 flex flex-col gap-2 z-20">
+                <span className="rounded-full bg-[color:var(--dark-forest)]/90 border border-[color:var(--gold)]/40 px-3.5 py-1 text-[9px] tracking-[0.2em] uppercase text-[color:var(--gold)] backdrop-blur-md shadow-md">
+                  ✓ Seoul National Univ Fellow
+                </span>
+                <span className="rounded-full bg-[color:var(--dark-forest)]/90 border border-[color:var(--gold)]/40 px-3.5 py-1 text-[9px] tracking-[0.2em] uppercase text-[color:var(--gold)] backdrop-blur-md shadow-md">
+                  ✓ Korean Board Certified
+                </span>
+              </div>
+            </div>
+
+            {/* Float Stats badge (Bottom-Right) */}
+            <div className="absolute bottom-6 right-[-10px] bg-[color:var(--emerald)]/95 border border-[color:var(--gold)]/45 rounded-xl p-5 text-white backdrop-blur-md shadow-xl z-25 transition-all duration-500 hover:translate-y-[-2px] hover:shadow-[color:var(--gold)]/20">
               <p className="text-[10px] tracking-[0.22em] uppercase text-[color:var(--gold)] font-bold">
                 Experience & Trust
               </p>
@@ -601,9 +625,16 @@ function BeforeAfterShowcase() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="grid items-end gap-10 md:grid-cols-12">
           <Reveal className="md:col-span-7">
-            <div className="flex items-center gap-3 text-[color:var(--gold)]">
-              <div className="w-8 h-px bg-[color:var(--gold)]" />
-              <p className="text-eyebrow font-semibold tracking-[0.4em]">BEFORE & AFTER RESULTS</p>
+            <div className="flex flex-col items-start text-[color:var(--gold)]">
+              <span className="font-script text-[clamp(1.75rem,3.5vw,3rem)] text-[color:var(--gold-dark)] leading-none select-none">
+                Patient Gallery
+              </span>
+              <div className="flex items-center gap-3 mt-1.5">
+                <div className="w-8 h-px bg-[color:var(--gold)]" />
+                <p className="text-eyebrow font-semibold tracking-[0.4em]">
+                  BEFORE & AFTER RESULTS
+                </p>
+              </div>
             </div>
 
             <h2 className="mt-6 font-display text-5xl leading-[1.05] text-[color:var(--dark-forest)] md:text-7xl font-extralight">
@@ -615,7 +646,8 @@ function BeforeAfterShowcase() {
           </Reveal>
           <Reveal delay={0.15} className="md:col-span-5">
             <p className="max-w-md text-base leading-relaxed text-[color:var(--muted-foreground)]">
-              Drag the slider to compare. All images represent actual patient outcomes with full consent. No editing or digital retouches are applied.
+              Drag the slider to compare. All images represent actual patient outcomes with full
+              consent. No editing or digital retouches are applied.
             </p>
           </Reveal>
         </div>
@@ -645,8 +677,14 @@ function Testimonials() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="grid items-end gap-10 md:grid-cols-12">
           <Reveal className="md:col-span-7">
-            <div className="flex items-center gap-3 text-[color:var(--gold)] animate-fade-in">
-              <p className="text-eyebrow font-semibold tracking-[0.4em]">PATIENT REVIEWS</p>
+            <div className="flex flex-col items-start text-[color:var(--gold)]">
+              <span className="font-script text-[clamp(1.75rem,3.5vw,3rem)] text-[color:var(--gold)] leading-none select-none">
+                Clinic Reviews
+              </span>
+              <div className="flex items-center gap-3 mt-1.5">
+                <div className="w-8 h-px bg-[color:var(--gold)]" />
+                <p className="text-eyebrow font-semibold tracking-[0.4em]">PATIENT REVIEWS</p>
+              </div>
             </div>
             <h2 className="mt-6 font-display text-5xl leading-[1.05] text-white md:text-6xl font-light">
               Genuine Patient <br />
@@ -693,9 +731,14 @@ function Gallery() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <Reveal>
-            <div className="flex items-center gap-3 text-[color:var(--gold)]">
-              <div className="w-8 h-px bg-[color:var(--gold)]" />
-              <p className="text-eyebrow font-semibold tracking-[0.4em]">GALLERY</p>
+            <div className="flex flex-col items-start text-[color:var(--gold)]">
+              <span className="font-script text-[clamp(1.75rem,3.5vw,3rem)] text-[color:var(--gold-dark)] leading-none select-none">
+                Our Atelier
+              </span>
+              <div className="flex items-center gap-3 mt-1.5">
+                <div className="w-8 h-px bg-[color:var(--gold)]" />
+                <p className="text-eyebrow font-semibold tracking-[0.4em]">GALLERY</p>
+              </div>
             </div>
 
             <h2 className="mt-6 font-display text-5xl leading-[1.05] text-[color:var(--dark-forest)] md:text-7xl font-extralight">
@@ -755,8 +798,17 @@ function CTA() {
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(200,164,106,0.08)_0%,transparent_60%)]" />
       <div className="mx-auto max-w-[1400px] px-6 relative z-10 md:px-10">
         <Reveal>
-          <div className="flex justify-center items-center gap-3 text-[color:var(--gold)]">
-            <p className="text-eyebrow font-semibold tracking-[0.4em]">SCHEDULE A PRIVATE CONSULTATION</p>
+          <div className="flex flex-col items-center text-[color:var(--gold)]">
+            <span className="font-script text-[clamp(2.0rem,4.5vw,3.5rem)] text-[color:var(--gold)] leading-none select-none">
+              Begin Your Journey
+            </span>
+            <div className="flex items-center gap-3 mt-1.5">
+              <div className="w-8 h-px bg-[color:var(--gold)]" />
+              <p className="text-eyebrow font-semibold tracking-[0.4em]">
+                SCHEDULE A PRIVATE CONSULTATION
+              </p>
+              <div className="w-8 h-px bg-[color:var(--gold)]" />
+            </div>
           </div>
 
           <h2 className="mx-auto mt-8 max-w-4xl font-display text-5xl leading-[1.05] md:text-7xl text-white font-extralight">
@@ -766,7 +818,8 @@ function CTA() {
             </span>
           </h2>
           <p className="mx-auto mt-8 max-w-xl text-sm leading-relaxed text-white/70">
-            Schedule an in-person consultation with our senior surgeon to receive a personalized treatment recommendation.
+            Schedule an in-person consultation with our senior surgeon to receive a personalized
+            treatment recommendation.
           </p>
 
           <Link
