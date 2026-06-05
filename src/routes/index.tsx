@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Sparkles, Award, ShieldCheck, CheckCircle2, Heart } from "lucide-react";
+import { ArrowRight, Sparkles, Award, ShieldCheck, CheckCircle2, Heart, Check } from "lucide-react";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import doctorPortrait from "@/assets/doctor-portrait.jpg";
 import beforeAfter1 from "@/assets/before-after-1.jpg";
@@ -64,13 +64,6 @@ function Hero() {
       {/* Gold Top Border Accent Line */}
       <div className="absolute top-0 left-0 right-0 h-[3px] bg-[color:var(--gold)] z-30" />
 
-      {/* Brand Watermark */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none opacity-[0.035]">
-        <span className="font-display text-[22vw] font-bold tracking-widest text-[color:var(--gold)] uppercase select-none">
-          SMILE
-        </span>
-      </div>
-
       <motion.div style={{ y }} className="absolute inset-0">
         <img
           src={heroClinic}
@@ -87,8 +80,7 @@ function Hero() {
         className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-between px-6 pb-20 pt-36 md:px-10 md:pb-32"
       >
         <div className="flex items-center gap-3 text-[color:var(--gold)]">
-          <Sparkles size={14} className="animate-pulse-soft" />
-          <p className="text-eyebrow font-semibold tracking-[0.4em]">SIGNATURE BEAUTY EXPERIENCE</p>
+          <p className="text-eyebrow font-semibold tracking-[0.4em]">SMILE PLASTIC SURGERY YANGON</p>
         </div>
 
         <div className="max-w-5xl text-white">
@@ -132,8 +124,7 @@ function Hero() {
             transition={{ duration: 1, delay: 0.8 }}
             className="mt-8 max-w-xl text-base leading-relaxed text-white/85 md:text-lg"
           >
-            A private atelier of aesthetic medicine — where surgical artistry, ethical care and
-            Korean-trained expertise meet the elegance you deserve.
+            Certified by the Korean Association of Plastic Surgeons. We deliver natural-looking cosmetic and reconstructive results tailored to your unique facial structure.
           </motion.p>
         </div>
 
@@ -236,10 +227,10 @@ function SignatureTreatments() {
                 <div className="w-8 h-px bg-[color:var(--gold)]" />
                 <p className="text-eyebrow font-semibold tracking-[0.4em]">PROCEDURES</p>
               </div>
-              <h2 className="mt-6 font-display text-5xl leading-[1.1] text-[color:var(--dark-forest)] md:text-7xl font-extralight">
-                Procedures crafted with <br />
+              <h2 className="mt-6 font-display text-5xl leading-[1.1] text-[color:var(--dark-forest)] md:text-7xl font-light">
+                Signature <br />
                 <span className="font-serif-display font-medium text-[color:var(--gold-dark)] text-[1.25em] tracking-wide uppercase block mt-3 leading-none">
-                  Surgical Artistry
+                  Aesthetic Procedures
                 </span>
               </h2>
             </Reveal>
@@ -247,8 +238,7 @@ function SignatureTreatments() {
           <div className="md:col-span-5">
             <Reveal delay={0.15}>
               <p className="max-w-md text-base leading-relaxed text-[color:var(--muted-foreground)]">
-                Each procedure is tailored to your anatomy and aspirations — performed in a private
-                surgical suite designed for comfort, discretion and care.
+                All treatments are tailored to your anatomy by certified surgeons, performed in sterile operating suites equipped with modern medical devices.
               </p>
             </Reveal>
           </div>
@@ -275,14 +265,6 @@ function SignatureTreatments() {
                       <div className="absolute top-6 right-6 w-3 h-3 border-t border-r border-[color:var(--gold)]/40 z-20 pointer-events-none" />
                       <div className="absolute bottom-6 left-6 w-3 h-3 border-b border-l border-[color:var(--gold)]/40 z-20 pointer-events-none" />
                       <div className="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-[color:var(--gold)]/40 z-20 pointer-events-none" />
-
-                      {/* Floating Gold Logo Mark */}
-                      <div className="absolute top-6 right-6 z-20 pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
-                        <Sparkles
-                          size={16}
-                          className="text-[color:var(--gold)] animate-pulse-soft"
-                        />
-                      </div>
 
                       <img
                         src={t.image}
@@ -443,27 +425,27 @@ function DoctorHighlight() {
 
           <div className="mt-8 flex flex-col gap-3.5 text-xs text-[color:var(--muted-foreground)] border-l border-[color:var(--gold)]/30 pl-5 py-1">
             <div className="flex items-center gap-3">
-              <Sparkles
-                size={11}
-                className="text-[color:var(--gold)] shrink-0 animate-pulse-soft"
+              <Check
+                size={12}
+                className="text-[color:var(--gold)] shrink-0"
               />
               <span className="font-sans tracking-wider text-[color:var(--dark-forest)]/90 font-medium">
                 Board-Certified Plastic Surgery Specialist
               </span>
             </div>
             <div className="flex items-center gap-3">
-              <Sparkles
-                size={11}
-                className="text-[color:var(--gold)] shrink-0 animate-pulse-soft"
+              <Check
+                size={12}
+                className="text-[color:var(--gold)] shrink-0"
               />
               <span className="font-sans tracking-wider text-[color:var(--dark-forest)]/90 font-medium">
                 Certified by Association of Korean Plastic Surgeons
               </span>
             </div>
             <div className="flex items-center gap-3">
-              <Sparkles
-                size={11}
-                className="text-[color:var(--gold)] shrink-0 animate-pulse-soft"
+              <Check
+                size={12}
+                className="text-[color:var(--gold)] shrink-0"
               />
               <span className="font-sans tracking-wider text-[color:var(--dark-forest)]/90 font-medium">
                 100% Dedicated Consultation & Continuous Care
@@ -621,20 +603,19 @@ function BeforeAfterShowcase() {
           <Reveal className="md:col-span-7">
             <div className="flex items-center gap-3 text-[color:var(--gold)]">
               <div className="w-8 h-px bg-[color:var(--gold)]" />
-              <p className="text-eyebrow font-semibold tracking-[0.4em]">BEFORE & AFTER</p>
+              <p className="text-eyebrow font-semibold tracking-[0.4em]">BEFORE & AFTER RESULTS</p>
             </div>
 
             <h2 className="mt-6 font-display text-5xl leading-[1.05] text-[color:var(--dark-forest)] md:text-7xl font-extralight">
               Real results, <br />
               <em className="font-serif-display font-medium text-[color:var(--gold)] block mt-2">
-                Honestly Shown.
+                Verified Outcomes.
               </em>
             </h2>
           </Reveal>
           <Reveal delay={0.15} className="md:col-span-5">
             <p className="max-w-md text-base leading-relaxed text-[color:var(--muted-foreground)]">
-              Drag the slider to compare. All images shared with consent — no retouching, only
-              refinement.
+              Drag the slider to compare. All images represent actual patient outcomes with full consent. No editing or digital retouches are applied.
             </p>
           </Reveal>
         </div>
@@ -664,15 +645,13 @@ function Testimonials() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="grid items-end gap-10 md:grid-cols-12">
           <Reveal className="md:col-span-7">
-            <div className="flex items-center gap-3 text-[color:var(--gold)]">
-              <Sparkles size={14} className="animate-pulse-soft" />
-              <p className="text-eyebrow font-semibold tracking-[0.4em]">PATIENT STORIES</p>
+            <div className="flex items-center gap-3 text-[color:var(--gold)] animate-fade-in">
+              <p className="text-eyebrow font-semibold tracking-[0.4em]">PATIENT REVIEWS</p>
             </div>
             <h2 className="mt-6 font-display text-5xl leading-[1.05] text-white md:text-6xl font-light">
-              <em className="font-serif-display text-[color:var(--gold)]">"</em> Stories of
-              confidence, <br />
+              Genuine Patient <br />
               <span className="italic font-serif-display font-medium text-[color:var(--gold)]">
-                softly told.
+                Feedback & Recovery.
               </span>
             </h2>
           </Reveal>
@@ -720,9 +699,9 @@ function Gallery() {
             </div>
 
             <h2 className="mt-6 font-display text-5xl leading-[1.05] text-[color:var(--dark-forest)] md:text-7xl font-extralight">
-              A moodboard of <br />
+              Clinic Atelier & <br />
               <em className="font-serif-display font-medium text-[color:var(--gold)] block mt-2">
-                Refined Moments.
+                Facilities Showcase.
               </em>
             </h2>
           </Reveal>
@@ -777,19 +756,17 @@ function CTA() {
       <div className="mx-auto max-w-[1400px] px-6 relative z-10 md:px-10">
         <Reveal>
           <div className="flex justify-center items-center gap-3 text-[color:var(--gold)]">
-            <Sparkles size={14} className="animate-pulse-soft" />
-            <p className="text-eyebrow font-semibold tracking-[0.4em]">BEGIN YOUR JOURNEY</p>
+            <p className="text-eyebrow font-semibold tracking-[0.4em]">SCHEDULE A PRIVATE CONSULTATION</p>
           </div>
 
           <h2 className="mx-auto mt-8 max-w-4xl font-display text-5xl leading-[1.05] md:text-7xl text-white font-extralight">
-            Ready For Your <br />
-            <em className="font-serif-display font-medium text-[color:var(--gold)] block mt-3 leading-none">
-              Transformation?
-            </em>
+            Discuss Your <br />
+            <span className="font-serif-display font-medium text-[color:var(--gold)] block mt-3 leading-none">
+              Aesthetic Goals
+            </span>
           </h2>
           <p className="mx-auto mt-8 max-w-xl text-sm leading-relaxed text-white/70">
-            Visit {CLINIC.name} for a one-on-one consultation with our lead surgeon. Korean-trained
-            expertise, customized to your aspirations.
+            Schedule an in-person consultation with our senior surgeon to receive a personalized treatment recommendation.
           </p>
 
           <Link
